@@ -1,7 +1,7 @@
 /* Google Fonts */
 /* ------------ */
 
-/* Inter Sans (Variable) */
+/* Inter Sans    /Variable    */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /*
@@ -38,7 +38,7 @@ h3 {
   font-weight: 500;
   font-style: italic;
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 p {

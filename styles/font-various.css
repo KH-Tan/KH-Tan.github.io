@@ -1,0 +1,29 @@
+/* Google Fonts */
+/* ------------ */
+
+/* Londrina Sketch  /Sans/Static */
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+/* Fredericka the Great  /Serif/Static */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+
+.londrina-sketch {
+  font-family: "Londrina Sketch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+  font-size: 32px;
+  color: purple;
+  background-color: aquamarine;
+}
+.fredericka-the-great {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 32px;
+  color: orange ;
+  background-color: aquamarine;
+}
