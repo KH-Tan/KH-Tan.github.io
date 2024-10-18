@@ -56,5 +56,14 @@ p {
   line-height: 1.5;
 }
 
+@media (min-width: 800px) {
+  p {
+    font-size: 1.25rem;
+  }
+}
 
-
+@media (min-width: 1200px) {
+  p {
+    font-size: 1.5rem;
+  }
+}
