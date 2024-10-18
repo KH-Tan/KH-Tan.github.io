@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/styles/reset.css">
-  <!-- <link rel="stylesheet" href="/styles/font-noto.css"> -->
-  <link rel="stylesheet" href="/styles/font-inter.css">
+  <link rel="stylesheet" href="/styles/font-noto.css">
+  <!-- <link rel="stylesheet" href="/styles/font-inter.css"> -->
   <link rel="stylesheet" href="/styles/font-various.css">
   <title>home1</title>
 
@@ -44,14 +44,11 @@ body {
   line-height: 1.5;
   background-color: var(--clr-gray020);
 }
-h1 {
+h1, h2, h3 {
   /* font-size: 3rem; */
+  text-align: center;
+}
 
-  /* class="noto-sans-h1" */
-}
-h2 {
-  /* font-size: 2rem; */
-}
 header {
   height: 8rem;
   width: 100%;
@@ -61,13 +58,13 @@ header {
   top: 0; left: 0;
   z-index: 9;
 
-  padding: 1rem;
+  padding-top: 0.75rem;
   text-align: center;
   user-select: none;
 }
 main {
   /* min-height: 75vh; */
-  background-color: var(--clr-gray020);
+  background-color: var(--clr-gray010);
   color: var(--clr-gray130);
 
   max-width: 800px;
@@ -80,12 +77,12 @@ section {
   margin-block: 1rem;
 }
 p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   /* font-size: 0.85rem; */
 }
 footer {
   height: 5rem;
-  background-color: var(--clr-gray010);
+  background-color: var(--clr-gray000);
   color: var(--clr-gray110);
   /* font-size: 1rem; */
   text-align: center;
@@ -96,6 +93,7 @@ img {
   background-color: #eee;
   border: 1px solid gray;
   padding: 0.5rem;
+  margin-block: 1rem;
 }
 .h-logo {
   color: var(--clr-gray010);
