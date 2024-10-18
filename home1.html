@@ -28,8 +28,11 @@
 
   --clr-highlight: orange;
 }
-
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem; 
+}
+  
 
 body {
   font-family: sans-serif;
@@ -38,23 +41,27 @@ body {
   background-color: var(--clr-gray020);
 }
 header {
-  min-height: 17vh;
+  height: 8rem;
+  width: 100%;
   background-color: var(--clr-gray110);
 
-  position: sticky;
+  position: fixed;
   top: 0; left: 0;
 
+  padding: 1rem;
   text-align: center;
   user-select: none;
 }
 main {
-  min-height: 75vh;
+  /* min-height: 75vh; */
   background-color: var(--clr-gray020);
   color: var(--clr-gray130);
 
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-inline: 1rem;
+  padding-top: 8rem; 
+
 }
 section {
   margin-block: 1rem;
@@ -64,7 +71,7 @@ p {
   font-size: 0.85rem;
 }
 footer {
-  min-height: 10vh;
+  height: 5rem;
   background-color: var(--clr-gray010);
   color: var(--clr-gray110);
   font-size: 1rem;

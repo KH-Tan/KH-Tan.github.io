@@ -14,8 +14,8 @@
 }
 html {
   color-scheme: dark light;
-  scroll-behavior: smooth;
-  scroll-padding-top: 20vh;  
+  /* scroll-behavior: smooth; */
+  /* scroll-padding-top: 20vh;   */
 
   font-size: 16px;
   /* webkit support only ??? */
