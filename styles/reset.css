@@ -23,8 +23,8 @@ html {
 }
 /* min body height*/
 body {
-  /* line-height: 1.3; */
-  /* letter-spacing: 0.1em; */
+  line-height: 1.3;
+  letter-spacing: 0.1em;
   /* word-spacing: 0.15em; */
 
   /* min-height: 100svh; */
