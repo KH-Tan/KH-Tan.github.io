@@ -92,18 +92,18 @@ details {
 
   /* overflow: hidden; */
   /* display: block; */
-  block-size: 5rem;
-  transition: all 0.9s ease-in-out;
+  /* block-size: 5rem; */
+  /* transition: all 0.9s ease-in-out; */
 
   /* transition-property: block-size, content-visibility; */
   /* transition-duration: 1s; */
-  transition-behavior: allow-discrete;
+  /* transition-behavior: allow-discrete; */
 
   &[open] {
     background-color: darkblue;
-    block-size: auto;
-    block-size: calc-size(auto);
-    display: block;
+    /* block-size: auto; */
+    /* block-size: calc-size(auto); */
+    /* display: block; */
   }
   
 
@@ -116,10 +116,8 @@ details {
     padding: 1em;
     border: 1px solid black;
     border-radius: 15px 15px 0 0;
-    &::marker {
-      color: red;
-      /* padding: 1rem; */
-    }
+
+    font-size: 2rem;
   }
   article {
     background-color: skyblue;
@@ -133,7 +131,15 @@ details {
   }
 }
 
-
+    summary::-webkit-details-marker {
+      color: blueviolet;
+      content: "\1f30f";
+    }
+    summary::marker {
+      color: yellow;
+      content: "\1f30f" "\0020" "\0020" "\26bd" "\0020" "\0020"   "\26bd" "\0020";
+      font-size: 2rem;
+    }
 
 
 @media (min-width: 900px) {
