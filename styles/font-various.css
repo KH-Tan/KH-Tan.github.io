@@ -1,3 +1,4 @@
+/* ------------ */
 /* Google Fonts */
 /* ------------ */
 
@@ -7,7 +8,8 @@
 /* Fredericka the Great  /Serif/Static */
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
-
+/* Indie Flower       Cursive/Static  */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .londrina-sketch {
   font-family: "Londrina Sketch", sans-serif;
@@ -26,4 +28,12 @@
   font-size: 32px;
   color: orange ;
   background-color: aquamarine;
+}
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 32px;
 }

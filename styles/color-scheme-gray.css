@@ -1,0 +1,61 @@
+/* ------------------------------------------------- */
+/*              color-scheme-gray.css                */
+/* ------------------------------------------------- */
+
+:root {
+  --clr-gray-000: #fff;
+  --clr-gray-010: #eee;
+  --clr-gray-020: #ddd;
+  --clr-gray-030: #ccc;
+  --clr-gray-040: #bbb;
+  --clr-gray-050: #aaa;
+  --clr-gray-060: #999;
+  --clr-gray-070: #888;
+  --clr-gray-080: #777;
+  --clr-gray-090: #666;
+  --clr-gray-100: #555;
+  --clr-gray-110: #444;
+  --clr-gray-120: #333;
+  --clr-gray-130: #222;
+  --clr-gray-140: #111;
+  --clr-gray-150: #000;
+
+  --clr-highlight: salmon;
+}
+
+body {
+  background-color: var(--clr-gray-020);
+  color: var(--clr-gray-130);
+}
+
+header {
+  background-color: var(--clr-gray-130);
+  color: var(--clr-gray-020);
+}
+main {
+  background-color: inherit;
+  color: inherit;
+}
+footer {
+  background-color: var(--clr-gray-110);
+  color: var(--clr-gray-040);
+}
+
+a {
+  color: var(--clr-gray-030);
+
+  &:hover {
+    color: var(--clr-gray-000);
+    text-decoration-color: var(--clr-highlight);
+  }
+}
+
+img {
+  background-color: var(--clr-gray-060);
+}
+
+.primary-logo {
+  color: var(--clr-gray-050);
+}
+
+/* -------------------- eof --------------------- */

@@ -5,125 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/font-noto.css">
+  <!-- <link rel="stylesheet" href="/styles/font-noto.css"> -->
   <!-- <link rel="stylesheet" href="/styles/font-inter.css"> -->
+   <link rel="stylesheet" href="/styles/font-lexend.css">
   <link rel="stylesheet" href="/styles/font-various.css">
+  <link rel="stylesheet" href="/styles/media-q-0.css">
+  <link rel="stylesheet" href="/styles/layout-1.css">
+  <link rel="stylesheet" href="/styles/color-scheme-gray.css">
   <title>home1</title>
 
 <style>
-:root {
-  --clr-gray000: #fff;
-  --clr-gray010: #eee;
-  --clr-gray020: #ddd;
-  --clr-gray030: #ccc;
-  --clr-gray040: #bbb;
-  --clr-gray050: #aaa;
-  --clr-gray060: #999;
-  --clr-gray070: #888;
-  --clr-gray080: #777;
-  --clr-gray090: #666;
-  --clr-gray100: #555;
-  --clr-gray110: #444;
-  --clr-gray120: #333;
-  --clr-gray130: #222;
-  --clr-gray140: #111;
-  --clr-gray150: #000;
 
-  --clr-highlight: orange;
-}
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 9rem; 
+  scroll-padding-top: 7rem; 
 }
-  
 
 body {
-  /* font-size: 1rem; */
   font-family: inherit;
-  /* font-weight: 400; */
   line-height: 1.5;
-  background-color: var(--clr-gray000);
 }
 h1, h2, h3 {
-  /* font-size: 3rem; */
   text-align: center;
 }
 
 header {
-  height: 8rem;
+  height: 6rem;
   width: 100%;
-  background-color: var(--clr-gray110);
 
   position: fixed;
   top: 0; left: 0;
   z-index: 9;
 
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
   text-align: center;
   user-select: none;
 }
 main {
   /* min-height: 75vh; */
-  background-color: var(--clr-gray000);
-  color: var(--clr-gray130);
-
   max-width: 600px;
   margin: 0 auto;
   padding-inline: 1rem;
-  padding-top: 8rem; 
-
+  padding-top: 6rem; 
 }
 section {
   margin-block: 1rem;
 }
 p {
   margin-bottom: 0.75rem;
-  /* font-size: 0.85rem; */
 }
 footer {
-  height: 5rem;
-  background-color: var(--clr-gray000);
-  color: var(--clr-gray110);
-  /* font-size: 1rem; */
+  height: 3rem;
   text-align: center;
-
-  padding: 1rem;
+  padding: 0.75rem;
 }
 img {
-  background-color: #eee;
   border: 1px solid gray;
   padding: 0.5rem;
   margin-block: 1rem;
 }
-.h-logo {
-  color: var(--clr-gray010);
-  font-size: 2.5rem;
+.primary-logo {
+  font-size: 2.15rem;
   font-family: cursive;
 }
 .h-nav {
   font-size: 1.15rem;
+}
 
   a {
     text-decoration: none;
-    color: var(--clr-gray030);
-
     padding: 0.2rem;
     cursor: pointer;
 
     &:hover {
-      color: var(--clr-gray000);
-       
-      /* text-decoration-thickness: 3px; */
-      /* text-decoration-style: solid; */
+      text-underline-offset: 0.35rem;
+      text-decoration-skip-ink: none;      
+      
+      text-decoration-thickness: 2px;
+      text-decoration-style: solid;
       /* text-decoration-color: orange; */
-      /* text-decoration-line: underline overline; */
-      text-decoration: underline overline var(--clr-highlight) 2px solid;
-      text-underline-offset: 0.25rem;
-      text-decoration-skip-ink: none;
+      text-decoration-line: underline overline;
     }    
   }
-
-}
 
 @media (min-width: 900px) {
   main {max-width: 800px; }
@@ -137,7 +99,7 @@ img {
 </head>
 <body>
 <header>
-  <div class="h-logo">Tanaka Travel</div>
+  <div class="primary-logo">Tanaka Travel</div>
   <nav class="h-nav">
     <a href="#h-home">Home</a>
     <a href="#h-thailand">Thailand</a>
@@ -156,6 +118,10 @@ img {
   <div class="fredericka-the-great">
     Lorem.
   </div>
+  <div class="indie-flower-regular">
+    Lorem Lorem Lorem.
+  </div>
+
 
   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae iusto earum soluta itaque nobis possimus illo corrupti doloribus voluptas dolor rem exercitationem voluptatem voluptatibus dolorum asperiores harum laudantium, adipisci maiores?</p>
 </section>
