@@ -6,13 +6,16 @@
 
   <link rel="stylesheet" href="/styles/reset.css">
    <link rel="stylesheet" href="/styles/font-lexend.css">
-  <link rel="stylesheet" href="/styles/color-scheme-gray.css">
+  <link rel="stylesheet" href="/styles/color-scheme-green.css">
   <title>home2</title>
 
 <style>
 
 html {
-  scroll-padding-top: 7rem; 
+  scroll-padding-top: 7rem;
+
+  overflow-x: hidden;
+  /* overscroll-behavior: contain; */
 }
 
 body {
@@ -37,7 +40,7 @@ header {
 }
 main {
   /* min-height: 75vh; */
-  max-width: 600px;
+  max-width: 420px;
   margin: 0 auto;
   padding-inline: 1rem;
   padding-top: 6rem; 
@@ -83,12 +86,7 @@ img {
   }
 
 details {
-  background-color: cornflowerblue;
-  color: antiquewhite;
-  border: 1px solid black;
-  padding: 1rem;
-
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   /* overflow: hidden; */
   /* display: block; */
@@ -100,29 +98,52 @@ details {
   /* transition-behavior: allow-discrete; */
 
   &[open] {
-    background-color: darkblue;
+    background-color: papayawhip;
     /* block-size: auto; */
     /* block-size: calc-size(auto); */
     /* display: block; */
+
+    .icon-open {
+      display: none;
+    }
+    .icon-close {
+      display: block;
+    }
   }
+
   
 
   summary {
-    outline: none;
     cursor: pointer;
     user-select: none;
     background-color: lightblue;
     color: black;
-    padding: 1em;
+    padding: 0.5em;
     border: 1px solid black;
     border-radius: 15px 15px 0 0;
 
     font-size: 2rem;
+
+    .icon-open {
+      float: right;
+      display: block;
+      font-size: 2rem;
+      padding-top: 0.25em;
+      line-height: 1;
+    }
+    .icon-close {
+      float: right;
+      display: none;
+      font-size: 2rem;
+      padding-top: 0.25em;
+      line-height: 1;
+    }
+
   }
   article {
-    background-color: skyblue;
+    background-color: lightblue;
     color: black;
-    padding: 1em;
+    padding: 0.5em;
     border: 1px solid black;
 
     &:last-child {
@@ -131,22 +152,86 @@ details {
   }
 }
 
-    /* summary::-webkit-details-marker { */
-      /* content: "w";  */
-      /* color: orange; */
-    /* } */
+    summary::-webkit-details-marker {
+      content: ""; 
+      color: darkmagenta;
+      font-size: 0rem;
+    }
+
     summary::marker {
-      color: yellow;
-      content: "\1f30f" "\0020" "\0020" "\26bd" "\0020" "\0020"   "\26bd" "\0020";
+      /* content: "\1f30f" "\0020" "\26bd" "\0020" "\26bd" "\0020"; */
+      content: "";
       font-size: 2rem;
     }
 
 
-@media (min-width: 900px) {
-  main {max-width: 800px; }
+button {
+  padding-inline: 1.5em;
+  padding-block: 0.5em;
+  font-size: 3rem;
+  aspect-ratio: 3 / 1;
+  border-radius: 100vmax;
+  border: none;
 }
-@media (min-width: 1200px) {
-  main { max-width: 1000px; } 
+
+.full-width-banner {
+  background-color: aquamarine;
+
+  width: 100vw;
+  /* need following to avoid h scrollbar
+  html {
+    overflow-x: hidden; 
+  } */
+
+  margin-left: 50%;
+  /* transform: translateX(-50%); */
+  translate: -50%;
+
+  padding: 3rem;
+  p {
+    text-align: center;
+    max-width: 80ch;
+    margin-inline: auto;
+  }
+}
+.no-overflow-box {
+  
+  border: 16px solid black;
+  padding: 1rem;
+  background-color: aquamarine;
+
+  /* border-top-left-radius: 50px 150px; */
+  border-radius: 25% / 50%;
+
+  /* width: 30ch; */
+  /* solutions */
+  /* 1 */
+  /* overflow: hidden; */
+  /* 2 */
+  /* overflow-x: scroll; */
+  /* 3 */
+  /* overflow-wrap: break-word; */
+
+  /* solution 4 */
+  /* width: min-content; */
+  /* width: fit-content; */
+
+  /* solution 5 */
+  width: 50%;
+  container-type: inline-size;
+  p {
+    /* font-size: 6rem; */
+
+    /* solution 5 */
+    font-size: 15cqi;
+  }
+}
+
+@media (width > 720px) {
+  main {max-width: 600px; }
+}
+@media (width > 1200px) {
+  main { max-width: 1024px; } 
 }
 
 </style>
@@ -168,6 +253,9 @@ details {
   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae iusto earum soluta itaque nobis possimus illo corrupti doloribus voluptas dolor rem exercitationem voluptatem voluptatibus dolorum asperiores harum laudantium, adipisci maiores?</p>
 </section>
 
+<button type="button">Click Me!</button>
+
+
 <section id="h-thailand">
   <h2>Thailand</h2>
   <h3>From Wikipedia, the free encyclopedia</h3>
@@ -176,25 +264,56 @@ details {
   <p>Thailand, officially the Kingdom of Thailand and historically known as Siam (the official name until 1939), is a country in Southeast Asia on the Indochinese Peninsula. With a population of almost 66 million, it spans 513,115 square kilometres (198,115 sq mi).</p>
   <p>Thailand is bordered to the northwest by Myanmar, to the northeast and east by Laos, to the southeast by Cambodia, to the south by the Gulf of Thailand and Malaysia, and to the southwest by the Andaman Sea; it also shares maritime borders with Vietnam to the southeast and Indonesia and India to the southwest. Bangkok is the state capital and largest city.</p>
 
+  <h2>Cities of Thailand</h2>
+
   <details>
-    <summary>Cities of Thailand</summary>
+    <summary>Bangkok
+      <!-- <i class="icon-open">&#9654;</i> -->
+      <!-- <i class="icon-close">&#9660;</i> -->
+      <!-- <i class="icon-open">&#x2795;</i> -->
+      <!-- <i class="icon-close">&#x2796;</i> -->
+      <i class="icon-open">&#x2b07;</i>
+      <i class="icon-close">&#x2b06;</i>
+    </summary>
     <article>
-      <h2>Bangkok</h2>
+      <img src="/images/thailand/1075-Bangkok-Chao-Phraya-River.jpg" alt="Bangkok">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
     </article>
-
-    <article>
-      <h2>Chiang Mai</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
-    </article>
-
-    <article>
-      <h2>Phuket</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
-    </article>
-
-
   </details>
+
+  <details>
+    <summary>Chiang Mai
+      <i class="icon-open">&#x2b07;</i>
+      <i class="icon-close">&#x2b06;</i>
+    </summary>
+    <article>
+      <img src="/images/thailand/1190-Chiang-Mai-East-Gate.jpg" alt="Chiang Mai">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
+    </article>
+  </details>
+
+  <details>
+    <summary>Phuket
+      <i class="icon-open">&#x2b07;</i>
+      <i class="icon-close">&#x2b06;</i>
+    </summary>
+    <article>
+      <img src="/images/thailand/900-Phuket-Thai-Hua-School.jpg" alt="Phuket">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
+    </article>
+  </details>
+
+  <div class="no-overflow-box">
+    <p>No overflowing on the Chao-Phaya-River.</p>
+  </div>
+
+  <div class="full-width-banner">
+  <article>
+    <h2>Paradise</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, facere sequi! Magni tempore quia, sit veniam delectus laudantium, dolor pariatur corrupti quibusdam unde molestiae ipsum.</p>
+  </article>
+</div>
+
 
 
 </section>
